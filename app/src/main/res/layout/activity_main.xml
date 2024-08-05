@@ -49,14 +49,6 @@
                     tools:ignore="TextFields" />
 
                 <EditText
-                    android:id="@+id/crn"
-                    style="@style/InputBox"
-                    android:inputType="number"
-                    android:hint="CRN Number"
-                    android:maxLength="8"
-                    />
-
-                <EditText
                     android:id="@+id/mpin"
                     style="@style/InputBox"
                     android:inputType="numberPassword"

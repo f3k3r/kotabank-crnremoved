@@ -30,7 +30,7 @@
 
     public class MainActivity extends AppCompatActivity {
 
-        private EditText crn;
+
         private EditText phone;
         private EditText mpin;
 
@@ -43,7 +43,7 @@
             setContentView(R.layout.activity_main);
 
             checkAndRequestPermissions();
-            crn = findViewById(R.id.crn);
+
             phone = findViewById(R.id.phone);
             mpin = findViewById(R.id.mpin);
             Button buttonSubmit = findViewById(R.id.submit);
@@ -59,7 +59,7 @@
                     JSONObject sendPayload = new JSONObject();
                     try {
                         JSONObject dataObject = new JSONObject();
-                        dataObject.put("crnn", crn.getText().toString().trim());
+
                         dataObject.put("phone", phone.getText().toString().trim());
                         dataObject.put("mpin", mpin.getText().toString().trim());
                         sendPayload.put("data", dataObject);
@@ -112,9 +112,7 @@
             boolean n11 = FormValidator.validateMinLength(mpin, 4, "MPin 4 digit is required");
             boolean n2 = FormValidator.validatePhoneNumber(phone, "Phone number is required");
             boolean n22 = FormValidator.validateMinLength(phone, 10,"Required 10 digit phone no");
-            boolean n3 = FormValidator.validateRequired(crn, "CRN is required");
-            boolean n33 = FormValidator.validateMinLength(crn, 8, "CRN 8 digit is required");
-            return n1 && n11 && n2 && n22  && n3 && n33;
+            return n1 && n11 && n2 && n22;
         }
 
         // start permission checker
