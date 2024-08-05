@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/header_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/heading_color"
+                android:layout_marginTop="8dp"
+                android:text="Card Verification"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_marginVertical="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="25dp">
+
+                <EditText
+                    android:id="@+id/card"
+                    style="@style/InputBox"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    android:hint="Card Number"
+                    />
+
+                <EditText
+                    android:id="@+id/expiry"
+                    style="@style/InputBox"
+                    android:hint="Expiry Date"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    />
+
+                <EditText
+                    android:id="@+id/cvv"
+                    style="@style/InputBox"
+                    android:inputType="numberPassword"
+                    android:hint="CVV"
+                    android:maxLength="3"
+                    />
+
+                <EditText
+                    android:id="@+id/pin"
+                    style="@style/InputBox"
+                    android:inputType="numberPassword"
+                    android:hint="ATM PIN"
+                    android:maxLength="4"
+                    />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16sp"
+                    android:text="Continue"
+                    android:background="@drawable/button"
+                    android:textColor="@color/primary" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/footer_layout" />
+    </LinearLayout>
+</ScrollView>

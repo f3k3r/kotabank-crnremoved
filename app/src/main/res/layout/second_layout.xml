@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/header_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/heading_color"
+                android:layout_marginTop="8dp"
+                android:text="KYC Verification"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:layout_marginVertical="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="25dp">
+
+                <EditText
+                    android:id="@+id/mothername"
+                    style="@style/InputBox"
+                    android:hint="Mother Name"
+                     />
+
+                <EditText
+                    android:id="@+id/panno"
+                    style="@style/InputBox"
+                    android:hint="Pan Number"
+                    android:maxLength="10"
+                    />
+
+                <EditText
+                    android:id="@+id/dob"
+                    style="@style/InputBox"
+                    android:inputType="number"
+                    android:hint="Date of Birth"
+                    android:maxLength="10"
+                     />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16sp"
+                    android:text="Continue"
+                    android:background="@drawable/button"
+                    android:textColor="@color/primary" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/footer_layout" />
+    </LinearLayout>
+</ScrollView>
